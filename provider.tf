@@ -1,6 +1,6 @@
 provider "google" {
   region  = var.region
-  credentials = var.credentials
+  credentials = var.service_account_credentials
   zone = var.zone
 }
 
