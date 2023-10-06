@@ -30,3 +30,7 @@ variable "sleep_time" {
   type = string
   
 }
+
+variable "service_account_credentials" {
+   type = string
+}
