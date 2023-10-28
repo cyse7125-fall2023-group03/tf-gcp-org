@@ -249,6 +249,7 @@ resource "google_compute_instance" "bastion" {
   chmod 700 get_helm.sh
   ./get_helm.sh
 
+  alias k="kubectl"
   gcloud container clusters get-credentials my-vpc-native-cluster --region us-east1 --internal-ip
   EOF
 }
