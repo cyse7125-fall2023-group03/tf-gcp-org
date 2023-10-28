@@ -249,7 +249,6 @@ resource "google_compute_instance" "bastion" {
   chmod 700 get_helm.sh
   ./get_helm.sh
 
-  alias k="kubectl"
   gcloud container clusters get-credentials my-vpc-native-cluster --region us-east1 --internal-ip
   EOF
 }
@@ -257,7 +256,9 @@ resource "google_compute_instance" "bastion" {
 resource "google_compute_project_metadata" "my_ssh_key" {
   project = google_project.project_1.project_id
   metadata = {
-    ssh-keys = file("/Users/pawan/.ssh/ec2.pub")
+    ssh-keys = <<EOF
+    ${var.ssh_user}:${file("/Users/pawan/.ssh/ec2.pub")}
+    EOF
   }
 }
 
