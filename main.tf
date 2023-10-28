@@ -257,7 +257,7 @@ resource "google_compute_project_metadata" "my_ssh_key" {
   project = google_project.project_1.project_id
   metadata = {
     ssh-keys = <<EOF
-    ${var.ssh_user}:${file("/Users/pawan/.ssh/ec2.pub")}
+    ${var.ssh_user}:${var.my_ssh_key}
     EOF
   }
 }
