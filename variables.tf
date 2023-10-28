@@ -18,9 +18,6 @@ variable "org_id" {
   type = string   
 }
 
-variable "project_id" {
-  type = string
-}
 
 variable "api_service_list" {
   type = list(string)
@@ -28,9 +25,8 @@ variable "api_service_list" {
 
 variable "sleep_time" {
   type = string
-  
 }
 
-variable "service_account_credentials" {
-   type = string
+variable "ssh_user" {
+  type = string
 }
