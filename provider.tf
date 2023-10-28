@@ -1,6 +1,6 @@
 provider "google" {
   region  = var.region
-  credentials = var.service_account_credentials
+  credentials = file("/Users/pawan/Documents/AdvCloud/IAMKeys/centering-timer-401021-5925c66ce00b.json")
   zone = var.zone
 }
 
