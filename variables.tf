@@ -30,3 +30,11 @@ variable "sleep_time" {
 variable "ssh_user" {
   type = string
 }
+
+variable "service_account_credentials" {
+  type = string
+}
+
+variable "my_ssh_key" {
+  type = string
+}
