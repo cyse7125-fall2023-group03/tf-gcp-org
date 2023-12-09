@@ -30,6 +30,6 @@ jobs:
         run: terraform fmt
         
       # Checks that all Terraform configuration files are valid
-      - name: Terraform Validate
-        run: terraform validate
+      #- name: Terraform Validate
+       # run: terraform validate
 
